@@ -6,7 +6,7 @@
     "author": "Danylo <107757498+DanyloDiachenko@users.noreply.github.com>",
     "license": "MIT",
     "scripts": {
-        "build-css": "sass ./index.scss ./style.css"
+        "build-css": "sass ./css/index.scss ./css/style.css"
     },
     "devDependencies": {
         "sass": "^1.77.8"

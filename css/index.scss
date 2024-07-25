@@ -1,0 +1,156 @@
+/* VARIABLES */
+/* Fonts */
+$font-inter: "Inter" sans-serif;
+/* Colors */
+$color-blue-dark: #181825;
+$color-blue-black: #0d1118;
+$color-black: #141417;
+$color-black-light: #0d111880;
+$color-pink: #d2cff5;
+$color-white: #ffffff;
+$color-blue: #2c27ff;
+$color-blue-light: #3f3bef;
+$color-blue-dark: #0149b4;
+$color-yellow: #f2d93b;
+$color-purple: #7e58f8;
+$color-grey: #363a3e;
+$gradient: linear-gradient(311.07deg, #19212e 2.99%, #2d2d51 97.01%);
+/* Border-radiuses */
+$radius-sm: 8px;
+$radius-md: 10px;
+$radius-lg: 15px;
+/* Media breakpoints */
+$breakpoint-1024: 1024px;
+$breakpoint-600: 768px;
+$breakpoint-360: 360px;
+/* Transition */
+$transition: 0.3s;
+
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: $color-white;
+    font-family: $font-inter;
+}
+
+/* TYPOGRAPHY */
+h1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77.45px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77.45px;
+}
+
+a {
+    color: $color-pink;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.36px;
+    text-decoration: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.2px;
+
+    &.button-sm {
+        background: $color-blue;
+        padding-right: 18px;
+        padding-left: 18px;
+        color: $color-white;
+        font-weight: 600;
+    }
+    &.button-md {
+        background: $color-white;
+        padding-right: 20px;
+        padding-left: 20px;
+        color: $color-blue;
+        text-transform: uppercase;
+    }
+    &.button-lg {
+        background: $color-blue;
+        padding-right: 26px;
+        padding-left: 26px;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+}
+
+.h3 {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58.09px;
+}
+
+/* CONTENT STYLES */
+/* Header */
+header {
+}
+
+/* Main */
+main {
+    /* Main Section */
+    .main-section {
+    }
+
+    /* Second Section */
+    .second-section {
+    }
+
+    /* Third-section */
+    .third-section {
+    }
+
+    /* Fourth Section */
+    .fourth-section {
+    }
+
+    /* Fifth Section */
+    .fifth-section {
+    }
+
+    /*  */
+    .sixth-section {
+    }
+
+    /*  */
+    .seventh-section {
+    }
+
+    /*  */
+    .eighth-section {
+    }
+
+    /*  */
+    .nineth-section {
+    }
+
+    /*  */
+    .tenth-section {
+    }
+
+    /*  */
+    .eleventh-section {
+    }
+}
+
+/* Footer */
+footer {
+}

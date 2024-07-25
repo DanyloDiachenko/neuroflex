@@ -1,0 +1,95 @@
+/* VARIABLES */
+/* Fonts */
+/* Colors */
+/* Border-radiuses */
+/* Media breakpoints */
+/* Transition */
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #ffffff;
+  font-family: "Inter" sans-serif;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77.45px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77.45px;
+}
+
+a {
+  color: #d2cff5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.36px;
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.2px;
+}
+button.button-sm {
+  background: #2c27ff;
+  padding-right: 18px;
+  padding-left: 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+button.button-md {
+  background: #ffffff;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #2c27ff;
+  text-transform: uppercase;
+}
+button.button-lg {
+  background: #2c27ff;
+  padding-right: 26px;
+  padding-left: 26px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58.09px;
+}
+
+/* CONTENT STYLES */
+/* Header */
+/* Main */
+main {
+  /* Main Section */
+  /* Second Section */
+  /* Third-section */
+  /* Fourth Section */
+  /* Fifth Section */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+}
+/* Footer *//*# sourceMappingURL=index.css.map */
