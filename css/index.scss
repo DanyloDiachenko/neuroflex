@@ -1,11 +1,11 @@
 /* VARIABLES */
 /* Fonts */
-$font-inter: "Inter" sans-serif;
+$font-inter: "Inter", sans-serif;
 /* Colors */
-$color-blue-dark: #181825;
+$color-blue-darkest: #181825;
 $color-blue-black: #0d1118;
 $color-black: #141417;
-$color-black-light: #0d111880;
+$color-black-light: #7d848f80;
 $color-pink: #d2cff5;
 $color-white: #ffffff;
 $color-blue: #2c27ff;
@@ -22,7 +22,7 @@ $radius-lg: 15px;
 /* Media breakpoints */
 $breakpoint-1024: 1024px;
 $breakpoint-600: 768px;
-$breakpoint-360: 360px;
+$breakpoint-360: 600px;
 /* Transition */
 $transition: 0.3s;
 
@@ -34,6 +34,7 @@ $transition: 0.3s;
 }
 
 body {
+    background: $color-blue-darkest;
     color: $color-white;
     font-family: $font-inter;
 }
@@ -72,22 +73,21 @@ button {
 
     &.button-sm {
         background: $color-blue;
-        padding-right: 18px;
-        padding-left: 18px;
+        padding: 18px 0;
         color: $color-white;
         font-weight: 600;
+        border-radius: $radius-lg;
     }
     &.button-md {
         background: $color-white;
-        padding-right: 20px;
-        padding-left: 20px;
+        padding: 20px 0;
         color: $color-blue;
         text-transform: uppercase;
+        border: 1px solid $color-blue;
     }
     &.button-lg {
         background: $color-blue;
-        padding-right: 26px;
-        padding-left: 26px;
+        padding: 26px 0;
         color: $color-white;
         text-transform: uppercase;
     }
@@ -99,15 +99,100 @@ button {
     line-height: 58.09px;
 }
 
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 100%;
+    max-width: 1280px;
+}
+
+.white {
+    color: $color-white;
+}
+
+.blue {
+    color: $color-blue;
+}
+
+.pink {
+    color: $color-pink;
+}
+
 /* CONTENT STYLES */
 /* Header */
 header {
+    margin-top: 42px;
+    border-bottom: 1px solid $color-white;
+    padding-bottom: 35px;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-column {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            span {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29.05px;
+            }
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+    }
 }
 
 /* Main */
 main {
     /* Main Section */
     .main-section {
+        display: grid;
+        grid-template-columns: 652px auto;
+        align-items: center;
+        gap: 7px;
+        margin-top: 108px;
+        margin-left: 116px;
+        position: relative;
+
+        .left-column {
+            .subtitle {
+                margin-top: 61px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29.05px;
+            }
+
+            p {
+                margin-top: 39px;
+                max-width: 582px;
+                font-size: 20px;
+                line-height: 24.2px;
+            }
+
+            button {
+                margin-top: 39px;
+                max-width: 250px;
+                gap: 30px;
+            }
+        }
+
+        .banner {
+            width: 100%;
+            max-width: 667px;
+            height: auto;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+        }
     }
 
     /* Second Section */
