@@ -1,0 +1,14 @@
+{
+    "name": "neuroflex",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/DanyloDiachenko/neuroflex.git",
+    "author": "Danylo <107757498+DanyloDiachenko@users.noreply.github.com>",
+    "license": "MIT",
+    "scripts": {
+        "build-css": "sass ./index.scss ./style.css"
+    },
+    "devDependencies": {
+        "sass": "^1.77.8"
+    }
+}
