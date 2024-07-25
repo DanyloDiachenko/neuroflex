@@ -42,7 +42,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   border: none;
+  border-radius: 15px;
   background: none;
   width: 100%;
   font-weight: 500;
@@ -54,14 +56,13 @@ button.button-sm {
   padding: 18px 0;
   color: #ffffff;
   font-weight: 600;
-  border-radius: 15px;
 }
 button.button-md {
+  border: 1px solid #2c27ff;
   background: #ffffff;
   padding: 20px 0;
   color: #2c27ff;
   text-transform: uppercase;
-  border: 1px solid #2c27ff;
 }
 button.button-lg {
   background: #2c27ff;
@@ -82,7 +83,7 @@ button.button-lg {
   padding-right: 20px;
   padding-left: 20px;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1320px;
 }
 
 .white {
@@ -95,6 +96,10 @@ button.button-lg {
 
 .pink {
   color: #d2cff5;
+}
+
+.yellow {
+  color: #f2d93b;
 }
 
 /* CONTENT STYLES */
@@ -140,12 +145,12 @@ main {
 }
 main .main-section {
   display: grid;
+  position: relative;
   grid-template-columns: 652px auto;
   align-items: center;
   gap: 7px;
   margin-top: 108px;
   margin-left: 116px;
-  position: relative;
 }
 main .main-section .left-column .subtitle {
   margin-top: 61px;
@@ -160,16 +165,54 @@ main .main-section .left-column p {
   line-height: 24.2px;
 }
 main .main-section .left-column button {
+  gap: 30px;
   margin-top: 39px;
   max-width: 250px;
-  gap: 30px;
 }
 main .main-section .banner {
-  width: 100%;
-  max-width: 667px;
-  height: auto;
   position: absolute;
   right: 0;
   z-index: -1;
+  width: 100%;
+  max-width: 667px;
+  height: auto;
+}
+main .second-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 193px;
+}
+main .second-section article {
+  border-radius: 8px;
+  background: #0d1118;
+  padding: 20px;
+}
+main .second-section article .top {
+  margin-left: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.2px;
+}
+main .second-section article img {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+main .second-section article img.target {
+  max-width: 199px;
+}
+main .second-section article img.folder {
+  max-width: 245px;
+}
+main .second-section article img.laptop {
+  max-width: 233px;
+}
+main .second-section article p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 21.78px;
+}
+main .second-section article button {
+  margin-top: 30px;
 }
 /* Footer *//*# sourceMappingURL=index.css.map */

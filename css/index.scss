@@ -64,7 +64,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     border: none;
+    border-radius: $radius-lg;
     background: none;
     width: 100%;
     font-weight: 500;
@@ -76,14 +78,13 @@ button {
         padding: 18px 0;
         color: $color-white;
         font-weight: 600;
-        border-radius: $radius-lg;
     }
     &.button-md {
+        border: 1px solid $color-blue;
         background: $color-white;
         padding: 20px 0;
         color: $color-blue;
         text-transform: uppercase;
-        border: 1px solid $color-blue;
     }
     &.button-lg {
         background: $color-blue;
@@ -105,7 +106,7 @@ button {
     padding-right: 20px;
     padding-left: 20px;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1320px;
 }
 
 .white {
@@ -118,6 +119,10 @@ button {
 
 .pink {
     color: $color-pink;
+}
+
+.yellow {
+    color: $color-yellow;
 }
 
 /* CONTENT STYLES */
@@ -156,12 +161,12 @@ main {
     /* Main Section */
     .main-section {
         display: grid;
+        position: relative;
         grid-template-columns: 652px auto;
         align-items: center;
         gap: 7px;
         margin-top: 108px;
         margin-left: 116px;
-        position: relative;
 
         .left-column {
             .subtitle {
@@ -179,24 +184,66 @@ main {
             }
 
             button {
+                gap: 30px;
                 margin-top: 39px;
                 max-width: 250px;
-                gap: 30px;
             }
         }
 
         .banner {
-            width: 100%;
-            max-width: 667px;
-            height: auto;
             position: absolute;
             right: 0;
             z-index: -1;
+            width: 100%;
+            max-width: 667px;
+            height: auto;
         }
     }
 
     /* Second Section */
     .second-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 193px;
+
+        article {
+            border-radius: $radius-sm;
+            background: $color-blue-black;
+            padding: 20px;
+
+            .top {
+                margin-left: 8px;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24.2px;
+            }
+
+            img {
+                display: block;
+                margin: 20px auto 0 auto;
+
+                &.target {
+                    max-width: 199px;
+                }
+                &.folder {
+                    max-width: 245px;
+                }
+                &.laptop {
+                    max-width: 233px;
+                }
+            }
+
+            p {
+                margin-top: 20px;
+                font-size: 18px;
+                line-height: 21.78px;
+            }
+
+            button {
+                margin-top: 30px;
+            }
+        }
     }
 
     /* Third-section */
