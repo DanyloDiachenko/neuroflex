@@ -1,9 +1,11 @@
 /* VARIABLES */
 /* Fonts */
 $font-inter: "Inter", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
 /* Colors */
 $color-blue-darkest: #181825;
 $color-blue-black: #0d1118;
+$color-blue-black-light: #0a0d16;
 $color-black: #141417;
 $color-black-light: #7d848f80;
 $color-pink: #d2cff5;
@@ -19,6 +21,7 @@ $gradient: linear-gradient(311.07deg, #19212e 2.99%, #2d2d51 97.01%);
 $radius-sm: 8px;
 $radius-md: 10px;
 $radius-lg: 15px;
+$radius-xl: 25px;
 /* Media breakpoints */
 $breakpoint-1024: 1024px;
 $breakpoint-600: 768px;
@@ -163,6 +166,7 @@ main {
         display: grid;
         position: relative;
         grid-template-columns: 652px auto;
+        justify-content: center;
         align-items: center;
         gap: 7px;
         margin-top: 108px;
@@ -191,9 +195,6 @@ main {
         }
 
         .banner {
-            position: absolute;
-            right: 0;
-            z-index: -1;
             width: 100%;
             max-width: 667px;
             height: auto;
@@ -248,14 +249,145 @@ main {
 
     /* Third-section */
     .third-section {
+        display: flex;
+        justify-content: center;
+        gap: 118px;
+        margin-top: 138px;
+        margin-right: 40px;
+        margin-left: 100px;
+
+        img {
+            max-width: 459px;
+        }
+
+        .right-column {
+            margin-top: 94px;
+
+            .subtitle {
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 24.38px;
+                font-family: $font-montserrat;
+            }
+
+            h2 {
+                margin-top: 8px;
+            }
+
+            .texts {
+                margin-top: 41px;
+
+                .item {
+                    margin-top: 14px;
+
+                    .title {
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 29.05px;
+                    }
+
+                    p {
+                        margin-top: 5px;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 24.2px;
+                    }
+                }
+            }
+
+            button {
+                gap: 18px;
+                margin-top: 50px;
+                max-width: 395px;
+            }
+        }
     }
 
     /* Fourth Section */
     .fourth-section {
+        display: flex;
+        justify-content: center;
+        gap: 52px;
+        background: $color-blue-black-light;
+        padding: 173px 132px 174px 83px;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .number {
+                font-weight: 500;
+                font-size: 96px;
+                line-height: 116.18px;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24.2px;
+            }
+        }
     }
 
     /* Fifth Section */
     .fifth-section {
+        margin-top: 85px;
+        text-align: center;
+
+        .subtitle {
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px solid $color-white;
+            border-radius: $radius-sm;
+            padding: 7.5px 0;
+            max-width: 153px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24.2px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 848px;
+        }
+
+        .content {
+            margin-top: 56px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+            gap: 90px;
+
+            .item {
+                .img-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: auto;
+                    margin-left: auto;
+                    border-radius: $radius-xl;
+                    background: $gradient;
+                    width: 92px;
+                    height: 92px;
+                }
+
+                .title {
+                    margin-top: 30px;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 29.05px;
+                }
+
+                p {
+                    margin-top: 23px;
+                    font-size: 24px;
+                    line-height: 29.05px;
+                }
+            }
+        }
     }
 
     /*  */
