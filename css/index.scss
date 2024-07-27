@@ -41,10 +41,10 @@ $transition: 0.3s;
 
 body {
     background: $color-blue-darkest;
-    color: $color-white;
-    font-family: $font-inter;
     max-width: 100vw;
     overflow-x: hidden;
+    color: $color-white;
+    font-family: $font-inter;
 }
 
 /* TYPOGRAPHY */
@@ -575,40 +575,40 @@ main {
 
     /*  */
     .eigth-section {
-        margin-top: 126px;
         position: relative;
         z-index: 0;
+        margin-top: 126px;
 
         .bg-left {
-            max-width: 808px;
-            top: -19px;
             position: absolute;
+            top: -19px;
             left: -409px;
             z-index: -1;
+            max-width: 808px;
         }
         .bg-center {
-            max-width: 426px;
-            top: -35px;
             position: absolute;
+            top: -35px;
             left: 560px;
             z-index: -1;
+            max-width: 426px;
         }
         .bg-right {
-            max-width: 808px;
-            top: -166px;
             position: absolute;
+            top: -166px;
             right: -443px;
             z-index: -1;
+            max-width: 808px;
         }
 
         .content {
+            z-index: 10;
+            backdrop-filter: blur(100px);
             margin-right: 20px;
             margin-left: 20px;
             border-radius: $radius-xl;
             background: $color-black-opacity;
             padding: 76px;
-            z-index: 10;
-            backdrop-filter: blur(100px);
 
             h2 {
                 margin-right: auto;
@@ -620,9 +620,9 @@ main {
             .items {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+                align-items: start;
                 gap: 80px;
                 margin-top: 66px;
-                align-items: start;
 
                 article {
                     display: grid;
@@ -664,14 +664,85 @@ main {
 
     /*  */
     .nineth-section {
+        margin-top: 138px;
+        text-align: center;
     }
 
     /*  */
     .tenth-section {
+        margin-top: 146px;
+
+        h2 {
+            text-align: center;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 54px;
+
+            article {
+                border-radius: $radius-md;
+                background: $color-blue-black;
+                padding: 20px;
+
+                .author {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 24.2px;
+                }
+
+                img {
+                    margin-top: 20px;
+                    border-radius: $radius-md;
+                    max-width: 100%;
+                }
+
+                p {
+                    margin-top: 20px;
+                    font-size: 24px;
+                    line-height: 29.05px;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+
+                button {
+                    margin-top: 30px;
+                }
+            }
+        }
     }
 
     /*  */
     .eleventh-section {
+        margin-top: 122px;
+        margin-right: 20px;
+        margin-left: 20px;
+        border-radius: $radius-xl;
+        background: $color-blue;
+        padding: 67px 0;
+        text-align: center;
+
+        p {
+            margin-top: 16px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 970px;
+            font-size: 32px;
+            line-height: 38.73px;
+        }
+
+        button {
+            margin-top: 48px;
+            max-width: 833px;
+            font-size: 36px;
+            line-height: 43.57px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
