@@ -612,11 +612,62 @@ main .eleventh-section p {
 }
 main .eleventh-section button {
   margin-top: 48px;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 833px;
   font-size: 36px;
   line-height: 43.57px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Footer *//*# sourceMappingURL=index.css.map */
+/* Footer */
+footer {
+  margin-top: 95px;
+  background: #141417;
+  padding: 97px 137px 137px 137px;
+  font-family: "DM Sans", sans-serif;
+}
+footer .content {
+  display: flex;
+  gap: 53px;
+}
+footer .content .left-column .logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .content .left-column p {
+  margin-top: 45px;
+  max-width: 420px;
+  font-size: 24px;
+  line-height: 31.25px;
+}
+footer .content .right-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
+footer .content .right-column .title {
+  margin-bottom: 30px;
+  color: #0149b4;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39.06px;
+}
+footer .content .right-column a {
+  display: block;
+  margin-top: 15px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31.25px;
+}
+footer .content .right-column .socials .title {
+  margin-bottom: 14px;
+}
+footer .content .right-column .socials .links {
+  display: flex;
+  gap: 10px;
+}
+footer .content .right-column .socials .links a {
+  margin-top: 0;
+}/*# sourceMappingURL=index.css.map */
