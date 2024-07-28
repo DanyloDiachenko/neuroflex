@@ -52,6 +52,15 @@ h1 {
     font-weight: 700;
     font-size: 64px;
     line-height: 77.45px;
+
+    @media (max-width: 1024px) {
+        font-size: 48px;
+        line-height: 58.09px;
+    }
+    @media (max-width: 600px) {
+        font-size: 32px;
+        line-height: 38.4px;
+    }
 }
 
 h2 {
@@ -81,11 +90,23 @@ button {
     font-size: 20px;
     line-height: 24.2px;
 
+    @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
     &.button-sm {
         background: $color-blue;
         padding: 18px 0;
         color: $color-white;
         font-weight: 600;
+
+        @media (max-width: 1024px) {
+            padding: 16px 0;
+        }
+        @media (max-width: 600px) {
+            font-weight: 500;
+        }
     }
     &.button-md {
         border: 1px solid $color-blue;
@@ -93,6 +114,13 @@ button {
         padding: 20px 0;
         color: $color-blue;
         text-transform: uppercase;
+
+        @media(max-width: 1024px) {
+            padding: 16px 0;
+        }
+        @media(max-width: 600px) {
+            padding: 12px 0;
+        }
     }
     &.button-lg {
         background: $color-blue;
@@ -143,6 +171,7 @@ header {
     @media (max-width: 1024px) {
         margin-top: 36px;
         border-bottom: none;
+        padding-bottom: 0;
     }
 
     .content {
@@ -165,7 +194,7 @@ header {
                 }
 
                 @media (max-width: 600px) {
-                    max-width: 50px;
+                    max-width: 80px;
                 }
             }
 
@@ -212,12 +241,24 @@ main {
     .main-section {
         display: grid;
         position: relative;
-        grid-template-columns: 652px auto;
+        grid-template-columns: auto minmax(400px, 667px);
         justify-content: center;
         align-items: center;
         gap: 7px;
         margin-top: 108px;
         margin-left: 116px;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: auto minmax(300px, 543px);
+            margin-top: 25px;
+            margin-left: 84px;
+        }
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+            margin-top: 51px;
+            margin-right: 21px;
+            margin-left: 25px;
+        }
 
         .left-column {
             .subtitle {
@@ -225,6 +266,17 @@ main {
                 font-weight: 700;
                 font-size: 24px;
                 line-height: 29.05px;
+
+                @media (max-width: 1024px) {
+                    margin-top: 40px;
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+                @media (max-width: 600px) {
+                    margin-top: 40px;
+                    font-size: 16px;
+                    line-height: 19.2px;
+                }
             }
 
             p {
@@ -232,12 +284,41 @@ main {
                 max-width: 582px;
                 font-size: 20px;
                 line-height: 24.2px;
+
+                @media (max-width: 1024px) {
+                    margin-top: 14px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19.36px;
+                }
+                @media (max-width: 600px) {
+                    margin-top: 25px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
             }
 
             button {
                 gap: 30px;
                 margin-top: 39px;
                 max-width: 250px;
+
+                @media (max-width: 1024px) {
+                    gap: 0;
+                }
+                @media (max-width: 600px) {
+                    gap: 30px;
+                    margin-top: 30px;
+                    max-width: 200px;
+                }
+
+                img {
+                    @media (max-width: 600px) {
+                        max-width: 25px;
+                        height: 15px;
+                    }
+                }
             }
         }
 
@@ -245,6 +326,13 @@ main {
             width: 100%;
             max-width: 667px;
             height: auto;
+
+            @media (max-width: 1024px) {
+                max-width: 543px;
+            }
+            @media (max-width: 600px) {
+                display: none;
+            }
         }
     }
 
@@ -255,16 +343,38 @@ main {
         gap: 22px;
         margin-top: 193px;
 
+        @media (max-width: 1024px) {
+            max-width: 890px;
+            margin: 114px auto 0 auto;
+        }
+        @media (max-width: 600px) {
+            max-width: 262px;
+            margin: 86px auto 0 auto;
+            grid-template-columns: 1fr;
+        }
+
         article {
             border-radius: $radius-sm;
             background: $color-blue-black;
             padding: 20px;
+            display: grid;
+
+            @media (max-width: 600px) {
+                padding: 15px;
+            }
 
             .top {
                 margin-left: 8px;
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 24.2px;
+
+                @media (max-width: 1024px) {
+                    font-size: 18px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
             }
 
             img {
@@ -273,12 +383,24 @@ main {
 
                 &.target {
                     max-width: 199px;
+
+                    @media (max-width: 1024px) {
+                        max-width: 140px;
+                    }
                 }
                 &.folder {
                     max-width: 245px;
+
+                    @media (max-width: 1024px) {
+                        max-width: 125px;
+                    }
                 }
                 &.laptop {
                     max-width: 233px;
+
+                    @media (max-width: 1024px) {
+                        max-width: 120px;
+                    }
                 }
             }
 
@@ -286,9 +408,19 @@ main {
                 margin-top: 20px;
                 font-size: 18px;
                 line-height: 21.78px;
+
+                @media (max-width: 1024px) {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
             }
 
-            button {
+            a {
+                align-self: flex-end;
                 margin-top: 30px;
             }
         }
