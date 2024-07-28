@@ -28,8 +28,7 @@ $radius-lg: 15px;
 $radius-xl: 25px;
 /* Media breakpoints */
 $breakpoint-1024: 1024px;
-$breakpoint-600: 768px;
-$breakpoint-360: 600px;
+$breakpoint-600: 600px;
 /* Transition */
 $transition: 0.3s;
 
@@ -141,6 +140,11 @@ header {
     border-bottom: 1px solid $color-white;
     padding-bottom: 35px;
 
+    @media (max-width: 1024px) {
+        margin-top: 36px;
+        border-bottom: none;
+    }
+
     .content {
         display: flex;
         justify-content: space-between;
@@ -151,16 +155,53 @@ header {
             align-items: center;
             gap: 10px;
 
+            @media (max-width: 600px) {
+                gap: 8px;
+            }
+
+            img {
+                @media (max-width: 1024px) {
+                    max-width: 99px;
+                }
+
+                @media (max-width: 600px) {
+                    max-width: 50px;
+                }
+            }
+
             span {
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 29.05px;
+
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                    line-height: 26.04px;
+                }
             }
         }
 
         nav {
             display: flex;
             gap: 30px;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+
+        .menu {
+            display: none;
+
+            @media (max-width: 1024px) {
+                display: block;
+                width: auto;
+            }
+            @media (max-width: 600px) {
+                img {
+                    max-width: 28px;
+                }
+            }
         }
     }
 }
