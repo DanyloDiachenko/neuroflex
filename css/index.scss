@@ -90,8 +90,12 @@ button {
     font-size: 20px;
     line-height: 24.2px;
 
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
     @media (max-width: 600px) {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
     }
 
@@ -127,6 +131,13 @@ button {
         padding: 26px 0;
         color: $color-white;
         text-transform: uppercase;
+
+        @media (max-width: 1024px) {
+            padding: 22px 0;
+        }
+        @media (max-width: 1024px) {
+            padding: 16px 0;
+        }
     }
 }
 
@@ -138,6 +149,10 @@ button {
     @media (max-width: 1024px) {
         font-size: 32px;
         line-height: 36px;
+    }
+    @media (max-width: 600px) {
+        font-size: 24px;
+        line-height: 28px;
     }
 }
 
@@ -442,28 +457,53 @@ main {
             margin: 114px 68px 0 68px;
             gap: 60px;
         }
+        @media (max-width: 600px) {
+            margin: 87px 20px 0 -133px;
+            gap: 0;
+        }
 
         .banner {
             max-width: 459px;
 
             @media (max-width: 1024px) {
-                max-width: 300px;
-                height: 550px;
+                max-height: 600px;
             }
         }
 
         .right-column {
             margin-top: 94px;
 
+            @media (max-width: 1024px) {
+                margin-top: 60px;
+            }
+            @media (max-width: 600px) {
+                margin-top: 65px;
+            }
+
             .subtitle {
                 font-weight: 800;
                 font-size: 20px;
                 line-height: 24.38px;
                 font-family: $font-montserrat;
+                text-transform: uppercase;
 
                 @media (max-width: 1024px) {
                     font-size: 18px;
                     line-height: 20px;
+                }
+                @media (max-width: 600px) {
+                    display: none;
+                }
+
+                &.subtitle-sm {
+                    display: none;
+                    margin-top: 30px;
+
+                    @media (max-width: 600px) {
+                        display: block;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
                 }
             }
 
@@ -473,9 +513,13 @@ main {
 
             .texts {
                 margin-top: 41px;
+                display: block;
 
                 @media (max-width: 1024px) {
                     margin-top: 31px;
+                }
+                @media (max-width: 600px) {
+                    display: none;
                 }
 
                 .item {
@@ -491,22 +535,35 @@ main {
                         line-height: 29.05px;
 
                         @media (max-width: 1024px) {
-                            font-size: 20px;
-                            line-height: 24px;
+                            font-size: 18px;
+                            line-height: 22px;
                         }
                     }
 
                     p {
                         margin-top: 5px;
                         font-weight: 600;
-                        font-size: 20px;
+                        font-size: 18px;
                         line-height: 24.2px;
 
                         @media (max-width: 1024px) {
-                            font-size: 18px;
+                            margin-top: 4px;
+                            font-size: 14px;
                             line-height: 22px;
                         }
                     }
+                }
+            }
+
+            .description {
+                display: block;
+                margin-top: 25px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+
+                @media (min-width: 600px) {
+                    display: none;
                 }
             }
 
@@ -517,6 +574,12 @@ main {
 
                 @media (max-width: 1024px) {
                     margin-top: 35px;
+                    max-width: 350px;
+                    gap: 15px;
+                }
+                @media (max-width: 600px) {
+                    max-width: 300px;
+                    margin-top: 20px;
                 }
             }
         }

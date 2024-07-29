@@ -65,9 +65,15 @@ button {
   font-size: 20px;
   line-height: 24.2px;
 }
+@media (max-width: 1024px) {
+  button {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 @media (max-width: 600px) {
   button {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
   }
 }
@@ -110,6 +116,16 @@ button.button-lg {
   color: #ffffff;
   text-transform: uppercase;
 }
+@media (max-width: 1024px) {
+  button.button-lg {
+    padding: 22px 0;
+  }
+}
+@media (max-width: 1024px) {
+  button.button-lg {
+    padding: 16px 0;
+  }
+}
 
 .h3 {
   font-weight: 900;
@@ -120,6 +136,12 @@ button.button-lg {
   .h3 {
     font-size: 32px;
     line-height: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .h3 {
+    font-size: 24px;
+    line-height: 28px;
   }
 }
 
@@ -448,23 +470,39 @@ main .third-section {
     gap: 60px;
   }
 }
+@media (max-width: 600px) {
+  main .third-section {
+    margin: 87px 20px 0 -133px;
+    gap: 0;
+  }
+}
 main .third-section .banner {
   max-width: 459px;
 }
 @media (max-width: 1024px) {
   main .third-section .banner {
-    max-width: 300px;
-    height: 550px;
+    max-height: 600px;
   }
 }
 main .third-section .right-column {
   margin-top: 94px;
+}
+@media (max-width: 1024px) {
+  main .third-section .right-column {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 600px) {
+  main .third-section .right-column {
+    margin-top: 65px;
+  }
 }
 main .third-section .right-column .subtitle {
   font-weight: 800;
   font-size: 20px;
   line-height: 24.38px;
   font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 @media (max-width: 1024px) {
   main .third-section .right-column .subtitle {
@@ -472,15 +510,37 @@ main .third-section .right-column .subtitle {
     line-height: 20px;
   }
 }
+@media (max-width: 600px) {
+  main .third-section .right-column .subtitle {
+    display: none;
+  }
+}
+main .third-section .right-column .subtitle.subtitle-sm {
+  display: none;
+  margin-top: 30px;
+}
+@media (max-width: 600px) {
+  main .third-section .right-column .subtitle.subtitle-sm {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 main .third-section .right-column h2 {
   margin-top: 8px;
 }
 main .third-section .right-column .texts {
   margin-top: 41px;
+  display: block;
 }
 @media (max-width: 1024px) {
   main .third-section .right-column .texts {
     margin-top: 31px;
+  }
+}
+@media (max-width: 600px) {
+  main .third-section .right-column .texts {
+    display: none;
   }
 }
 main .third-section .right-column .texts .item {
@@ -498,20 +558,33 @@ main .third-section .right-column .texts .item .title {
 }
 @media (max-width: 1024px) {
   main .third-section .right-column .texts .item .title {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 main .third-section .right-column .texts .item p {
   margin-top: 5px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24.2px;
 }
 @media (max-width: 1024px) {
   main .third-section .right-column .texts .item p {
-    font-size: 18px;
+    margin-top: 4px;
+    font-size: 14px;
     line-height: 22px;
+  }
+}
+main .third-section .right-column .description {
+  display: block;
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+@media (min-width: 600px) {
+  main .third-section .right-column .description {
+    display: none;
   }
 }
 main .third-section .right-column button {
@@ -522,6 +595,14 @@ main .third-section .right-column button {
 @media (max-width: 1024px) {
   main .third-section .right-column button {
     margin-top: 35px;
+    max-width: 350px;
+    gap: 15px;
+  }
+}
+@media (max-width: 600px) {
+  main .third-section .right-column button {
+    max-width: 300px;
+    margin-top: 20px;
   }
 }
 main .fourth-section {
