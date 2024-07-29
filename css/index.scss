@@ -67,6 +67,15 @@ h2 {
     font-weight: 600;
     font-size: 64px;
     line-height: 77.45px;
+
+    @media (max-width: 1024px) {
+        font-size: 48px;
+        line-height: 58px;
+    }
+    @media (max-width: 600px) {
+        font-size: 32px;
+        line-height: 38.4px;
+    }
 }
 
 a {
@@ -364,20 +373,20 @@ main {
         margin-top: 193px;
 
         @media (max-width: 1024px) {
-            max-width: 890px;
             margin: 114px auto 0 auto;
+            max-width: 890px;
         }
         @media (max-width: 600px) {
-            max-width: 262px;
-            margin: 86px auto 0 auto;
             grid-template-columns: 1fr;
+            margin: 86px auto 0 auto;
+            max-width: 262px;
         }
 
         article {
+            display: grid;
             border-radius: $radius-sm;
             background: $color-blue-black;
             padding: 20px;
-            display: grid;
 
             @media (max-width: 600px) {
                 padding: 15px;
@@ -454,12 +463,12 @@ main {
         margin: 138px 40px 0 100px;
 
         @media (max-width: 1024px) {
-            margin: 114px 68px 0 68px;
             gap: 60px;
+            margin: 114px 68px 0 68px;
         }
         @media (max-width: 600px) {
-            margin: 87px 20px 0 -133px;
             gap: 0;
+            margin: 87px 20px 0 -133px;
         }
 
         .banner {
@@ -512,8 +521,8 @@ main {
             }
 
             .texts {
-                margin-top: 41px;
                 display: block;
+                margin-top: 41px;
 
                 @media (max-width: 1024px) {
                     margin-top: 31px;
@@ -573,13 +582,23 @@ main {
                 max-width: 395px;
 
                 @media (max-width: 1024px) {
+                    gap: 15px;
                     margin-top: 35px;
                     max-width: 350px;
-                    gap: 15px;
                 }
                 @media (max-width: 600px) {
-                    max-width: 300px;
+                    gap: 7px;
                     margin-top: 20px;
+                    padding: 12px 0;
+                    max-width: 300px;
+
+                    span {
+                        font-size: 12px;
+                    }
+
+                    img {
+                        width: 14px;
+                    }
                 }
             }
         }
@@ -590,8 +609,19 @@ main {
         display: flex;
         justify-content: center;
         gap: 52px;
+        margin-top: 116px;
         background: $color-blue-black-light;
         padding: 173px 132px 174px 83px;
+
+        @media (max-width: 1024px) {
+            gap: 40px;
+            margin-top: 37px;
+            padding: 100px 50px;
+        }
+        @media (max-width: 600px) {
+            margin-top: 42px;
+            padding: 35px 10px;
+        }
 
         .item {
             display: flex;
@@ -602,12 +632,30 @@ main {
                 font-weight: 500;
                 font-size: 96px;
                 line-height: 116.18px;
+
+                @media (max-width: 1024px) {
+                    font-size: 60px;
+                    line-height: 80px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 24px;
+                    line-height: 40px;
+                }
             }
 
             p {
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 24.2px;
+
+                @media (max-width: 1024px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 8px;
+                    line-height: 12px;
+                }
             }
         }
     }
@@ -616,6 +664,13 @@ main {
     .fifth-section {
         margin-top: 85px;
         text-align: center;
+
+        @media (max-width: 1024px) {
+            margin-top: 78px;
+        }
+        @media (max-width: 600px) {
+            margin-top: 26px;
+        }
 
         .subtitle {
             margin-right: auto;
@@ -627,6 +682,11 @@ main {
             font-weight: 500;
             font-size: 20px;
             line-height: 24.2px;
+
+            @media (max-width: 600px) {
+                font-size: 18px;
+                padding: 5px 0;
+            }
         }
 
         h2 {
@@ -634,6 +694,10 @@ main {
             margin-right: auto;
             margin-left: auto;
             max-width: 848px;
+
+            @media (max-width: 600px) {
+                margin-top: 25px;
+            }
         }
 
         .content {
@@ -642,6 +706,16 @@ main {
             justify-content: space-between;
             gap: 90px;
             margin-top: 56px;
+
+            @media (max-width: 1024px) {
+                gap: 50px;
+                margin-top: 40px;
+            }
+            @media (max-width: 600px) {
+                margin-top: 30px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
 
             .item {
                 .img-wrapper {
@@ -654,6 +728,15 @@ main {
                     background: $gradient;
                     width: 92px;
                     height: 92px;
+
+                    @media (max-width: 600px) {
+                        width: 62px;
+                        height: 62px;
+                    }
+
+                    img {
+                        width: 30px;
+                    }
                 }
 
                 .title {
@@ -661,12 +744,24 @@ main {
                     font-weight: 600;
                     font-size: 24px;
                     line-height: 29.05px;
+
+                    @media (max-width: 600px) {
+                        font-size: 18px;
+                        line-height: 24px;
+                        margin-top: 20px;
+                    }
                 }
 
                 p {
                     margin-top: 23px;
                     font-size: 24px;
                     line-height: 29.05px;
+
+                    @media (max-width: 600px) {
+                        margin-top: 10px;
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
                 }
             }
         }
