@@ -1148,12 +1148,23 @@ main .eigth-section .bg-center {
     left: 200px;
   }
 }
+@media (max-width: 600px) {
+  main .eigth-section .bg-center {
+    width: 300px;
+  }
+}
 main .eigth-section .bg-right {
   position: absolute;
   top: -166px;
   right: -443px;
   z-index: -1;
   max-width: 808px;
+}
+@media (max-width: 600px) {
+  main .eigth-section .bg-right {
+    top: auto;
+    bottom: -200px;
+  }
 }
 main .eigth-section .content {
   z-index: 10;

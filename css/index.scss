@@ -1119,6 +1119,9 @@ main {
             @media (max-width: 1024px) {
                 left: 200px;
             }
+            @media (max-width: 600px) {
+                width: 300px;
+            }
         }
         .bg-right {
             position: absolute;
@@ -1126,6 +1129,11 @@ main {
             right: -443px;
             z-index: -1;
             max-width: 808px;
+
+            @media (max-width: 600px) {
+                top: auto;
+                bottom: -200px;
+            }
         }
 
         .content {
