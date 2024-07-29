@@ -234,6 +234,7 @@ header {
             img {
                 @media (max-width: 1024px) {
                     max-width: 99px;
+                    margin-left: -10px;
                 }
 
                 @media (max-width: 600px) {

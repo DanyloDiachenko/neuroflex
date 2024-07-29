@@ -226,6 +226,7 @@ header .content .left-column {
 @media (max-width: 1024px) {
   header .content .left-column img {
     max-width: 99px;
+    margin-left: -10px;
   }
 }
 @media (max-width: 600px) {
