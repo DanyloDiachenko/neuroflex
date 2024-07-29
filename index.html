@@ -34,15 +34,17 @@
                     <img src="./images/icons/logo.png" alt="Логотип" />
                     <span class="white">Neuroflex</span>
                 </a>
-                <nav>
-                    <a href="#">О Проекте</a>
-                    <a href="#"> Курсы</a>
-                    <a href="#">Профессии</a>
-                    <a href="#">Диагностика</a>
-                    <a href="#">Работа</a>
-                    <a href="#">Поддержка</a>
+                <nav class="active" id="navigation-menu">
+                    <div class="content">
+                        <a href="#">О Проекте</a>
+                        <a href="#"> Курсы</a>
+                        <a href="#">Профессии</a>
+                        <a href="#">Диагностика</a>
+                        <a href="#">Работа</a>
+                        <a href="#">Поддержка</a>
+                    </div>
                 </nav>
-                <button class="menu">
+                <button class="menu" id="burger-button">
                     <img src="./images/icons/menu.svg" alt="Menu" />
                 </button>
             </div>
@@ -59,13 +61,14 @@
                         Lorem ipsum dolor sit amet, eu omnes mnesarchum eos, at
                         cum primis principes primis principes my log
                     </p>
-                    <button class="button-sm">
-                        <span>More about us</span>
-                        <img
-                            src="./images/icons/arrow-right-md.svg"
-                            alt="Arrow"
-                        />
-                    </button>
+                    <a href="#"
+                        ><button class="button-sm">
+                            <span>More about us</span>
+                            <img
+                                src="./images/icons/arrow-right-md.svg"
+                                alt="Arrow"
+                            /></button
+                    ></a>
                 </div>
                 <img
                     src="./images/banners/main-banner.png"
@@ -173,13 +176,15 @@
                         Lorem ipsum dolor sit amet, eu omnes mnesarchum eos, at
                         cum primis principes primis principes my log
                     </p>
-                    <button class="button-lg">
-                        <span>більше про нас</span>
-                        <img
-                            src="./images/icons/arrow-right-sm.svg"
-                            alt="Arrow"
-                        />
-                    </button>
+                    <a href="#">
+                        <button class="button-lg">
+                            <span>більше про нас</span>
+                            <img
+                                src="./images/icons/arrow-right-sm.svg"
+                                alt="Arrow"
+                            />
+                        </button>
+                    </a>
                 </div>
             </section>
             <section class="fourth-section">
@@ -384,13 +389,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button-lg">
-                        <span>більше про нас</span>
-                        <img
-                            src="./images/icons/arrow-right-sm.svg"
-                            alt="Arrow"
-                        />
-                    </button>
+                    <a href="#"
+                        ><button class="button-lg">
+                            <span>більше про нас</span>
+                            <img
+                                src="./images/icons/arrow-right-sm.svg"
+                                alt="Arrow"
+                            /></button
+                    ></a>
                 </div>
             </section>
             <section class="eigth-section">
@@ -586,4 +592,6 @@
             </div>
         </footer>
     </body>
+
+    <script src="./js/index.js"></script>
 </html>

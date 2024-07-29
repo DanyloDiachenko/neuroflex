@@ -21,6 +21,8 @@ $color-yellow-dark: #fdd923;
 $color-purple: #7e58f8;
 $color-grey: #363a3e;
 $gradient: linear-gradient(311.07deg, #19212e 2.99%, #2d2d51 97.01%);
+/* Shadows */
+$shadow-article: 2px 2px 10px 2px rgba(157, 157, 157, 0.1);
 /* Border-radiuses */
 $radius-sm: 8px;
 $radius-md: 10px;
@@ -89,6 +91,11 @@ a {
     font-size: 16px;
     line-height: 19.36px;
     text-decoration: none;
+    transition: $transition;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 button {
@@ -247,25 +254,60 @@ header {
         }
 
         nav {
-            display: flex;
-            gap: 30px;
+            .content {
+                display: flex;
+                gap: 30px;
+                min-height: 0px;
+                border-radius: $radius-xl;
+            }
 
             @media (max-width: 1024px) {
-                display: none;
+                position: absolute;
+                right: 0;
+                background: #0d1118da;
+                right: 25px;
+                top: 85px;
+                display: grid;
+                grid-template-rows: 0fr;
+                z-index: 10;
+                transition: $transition;
+                overflow: hidden;
+
+                &.active {
+                    grid-template-rows: 1fr;
+                    padding: 10px;
+                }
+            }
+
+            .content {
+                display: flex;
+                gap: 30px;
+
+                @media (max-width: 1024px) {
+                    display: block;
+                }
+
+                a {
+                    @media (max-width: 1024px) {
+                        display: block;
+                        text-align: end;
+                        padding: 5px 10px 5px 20px;
+                    }
+                }
             }
         }
+    }
 
-        .menu {
-            display: none;
+    .menu {
+        display: none;
 
-            @media (max-width: 1024px) {
-                display: block;
-                width: auto;
-            }
-            @media (max-width: 600px) {
-                img {
-                    max-width: 28px;
-                }
+        @media (max-width: 1024px) {
+            display: block;
+            width: auto;
+        }
+        @media (max-width: 600px) {
+            img {
+                max-width: 28px;
             }
         }
     }
@@ -394,9 +436,14 @@ main {
             border-radius: $radius-sm;
             background: $color-blue-black;
             padding: 20px;
+            transition: $transition;
 
             @media (max-width: 600px) {
                 padding: 15px;
+            }
+
+            &:hover {
+                box-shadow: $shadow-article;
             }
 
             .top {
@@ -813,9 +860,14 @@ main {
                 border-radius: $radius-sm;
                 background: $color-blue-black;
                 padding: 20px;
+                transition: $transition;
 
-                @media (max-width: 600px) {
+                @media (max-width: 1024px) {
                     padding: 15px;
+                }
+
+                &:hover {
+                    box-shadow: $shadow-article;
                 }
 
                 .top {
@@ -1225,6 +1277,16 @@ main {
                         font-size: 24px;
                         line-height: 29.05px;
 
+                        &:hover {
+                            img {
+                                margin-right: -15px;
+                            }
+                        }
+
+                        img {
+                            transition: $transition;
+                        }
+
                         @media (max-width: 1024px) {
                             font-size: 16px;
                             line-height: 24px;
@@ -1279,9 +1341,14 @@ main {
                 border-radius: $radius-md;
                 background: $color-blue-black;
                 padding: 20px;
+                transition: $transition;
 
                 @media (max-width: 1024px) {
                     padding: 15px;
+                }
+
+                &:hover {
+                    box-shadow: $shadow-article;
                 }
 
                 .author {
