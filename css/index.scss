@@ -102,10 +102,12 @@ button {
     @media (max-width: 1024px) {
         font-size: 18px;
         line-height: 22px;
+        border-radius: $radius-md;
     }
     @media (max-width: 600px) {
         font-size: 14px;
         line-height: 20px;
+        border-radius: $radius-sm;
     }
 
     &.button-sm {
@@ -878,25 +880,58 @@ main {
     /*  */
     .seventh-section {
         display: grid;
-        grid-template-columns: auto 684px;
+        grid-template-columns: minmax(400px, 478px) minmax(400px, 684px);
         justify-content: center;
         gap: 118px;
         margin-top: 210px;
         margin-right: 63px;
         margin-left: 100px;
 
-        img {
+        @media (max-width: 1024px) {
+            margin: 64px 40px 0 20px;
+            grid-template-columns: minmax(292px, 360px) minmax(300px, 400px);
+            gap: 20px;
+        }
+        @media (max-width: 600px) {
+            margin: 141px 20px 0 -128px;
+            grid-template-columns: 292px minmax(0, 500px);
+            gap: 0;
+        }
+
+        .banner {
+            width: 100%;
             max-width: 478px;
+
+            @media (max-width: 600px) {
+                max-width: 292px;
+            }
         }
 
         .right-column {
             margin-top: 98px;
+
+            @media (max-width: 1024px) {
+                margin-top: 70px;
+            }
+            @media (max-width: 600px) {
+                margin-top: 50px;
+                margin-left: -10px;
+            }
 
             .subtitle {
                 font-weight: 800;
                 font-size: 20px;
                 line-height: 24.38px;
                 font-family: $font-montserrat;
+
+                @media (max-width: 1024px) {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
             }
 
             h2 {
@@ -906,15 +941,36 @@ main {
             .bars {
                 margin-top: 41px;
 
+                @media (max-width: 1024px) {
+                    margin-top: 30px;
+                }
+                @media (max-width: 600px) {
+                    margin-top: 20px;
+                }
+
                 .item {
                     margin-top: 17px;
                     font-weight: 600;
                     font-size: 24px;
                     line-height: 29.05px;
 
+                    @media (max-width: 1024px) {
+                        margin-top: 14px;
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                    @media (max-width: 600px) {
+                        font-size: 13px;
+                        line-height: 20px;
+                    }
+
                     &.keyword {
                         .number {
                             margin-right: 18px;
+
+                            @media (max-width: 600px) {
+                                margin-right: 5px;
+                            }
                         }
 
                         .active {
@@ -925,6 +981,10 @@ main {
                     &.seo-analytics {
                         .number {
                             margin-right: 80px;
+
+                            @media (max-width: 600px) {
+                                margin-right: 20px;
+                            }
                         }
 
                         .active {
@@ -945,6 +1005,10 @@ main {
                     &.seo-audit {
                         .number {
                             margin-right: 15px;
+
+                            @media (max-width: 600px) {
+                                margin-right: 5px;
+                            }
                         }
 
                         .active {
@@ -955,6 +1019,10 @@ main {
                     &.optimization {
                         .number {
                             margin-right: 121px;
+
+                            @media (max-width: 600px) {
+                                margin-right: 20px;
+                            }
                         }
 
                         .active {
@@ -976,6 +1044,14 @@ main {
                         width: 100%;
                         height: 8px;
 
+                        @media (max-width: 1024px) {
+                            margin-top: 14px;
+                            height: 6px;
+                        }
+                        @media (max-width: 600px) {
+                            margin-top: 8px;
+                        }
+
                         .active {
                             position: absolute;
                             top: 0;
@@ -983,6 +1059,10 @@ main {
                             border-top-left-radius: $radius-md;
                             border-bottom-left-radius: $radius-md;
                             height: 8px;
+
+                            @media (max-width: 1024px) {
+                                height: 6px;
+                            }
                         }
                     }
                 }
@@ -992,6 +1072,17 @@ main {
                 gap: 18px;
                 margin-top: 44px;
                 max-width: 395px;
+
+                @media (max-width: 600px) {
+                    margin-top: 20px;
+                    font-size: 12px;
+                    padding: 12px 0;
+
+                    img {
+                        max-width: 12px;
+                        gap: 10px;
+                    }
+                }
             }
         }
     }
