@@ -1,1 +1,1 @@
-1. change logo image - different images (media device size)
+1. header change logo image - different images (media device size)

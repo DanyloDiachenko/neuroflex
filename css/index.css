@@ -116,6 +116,12 @@ button.button-lg {
   font-size: 48px;
   line-height: 58.09px;
 }
+@media (max-width: 1024px) {
+  .h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
 
 .container {
   margin-right: auto;
@@ -434,12 +440,22 @@ main .third-section {
   display: flex;
   justify-content: center;
   gap: 118px;
-  margin-top: 138px;
-  margin-right: 40px;
-  margin-left: 100px;
+  margin: 138px 40px 0 100px;
 }
-main .third-section img {
+@media (max-width: 1024px) {
+  main .third-section {
+    margin: 114px 68px 0 68px;
+    gap: 60px;
+  }
+}
+main .third-section .banner {
   max-width: 459px;
+}
+@media (max-width: 1024px) {
+  main .third-section .banner {
+    max-width: 300px;
+    height: 550px;
+  }
 }
 main .third-section .right-column {
   margin-top: 94px;
@@ -450,19 +466,41 @@ main .third-section .right-column .subtitle {
   line-height: 24.38px;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 1024px) {
+  main .third-section .right-column .subtitle {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
 main .third-section .right-column h2 {
   margin-top: 8px;
 }
 main .third-section .right-column .texts {
   margin-top: 41px;
 }
+@media (max-width: 1024px) {
+  main .third-section .right-column .texts {
+    margin-top: 31px;
+  }
+}
 main .third-section .right-column .texts .item {
   margin-top: 14px;
+}
+@media (max-width: 1024px) {
+  main .third-section .right-column .texts .item {
+    margin-top: 10px;
+  }
 }
 main .third-section .right-column .texts .item .title {
   font-weight: 600;
   font-size: 24px;
   line-height: 29.05px;
+}
+@media (max-width: 1024px) {
+  main .third-section .right-column .texts .item .title {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 main .third-section .right-column .texts .item p {
   margin-top: 5px;
@@ -470,10 +508,21 @@ main .third-section .right-column .texts .item p {
   font-size: 20px;
   line-height: 24.2px;
 }
+@media (max-width: 1024px) {
+  main .third-section .right-column .texts .item p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 main .third-section .right-column button {
   gap: 18px;
   margin-top: 50px;
   max-width: 395px;
+}
+@media (max-width: 1024px) {
+  main .third-section .right-column button {
+    margin-top: 35px;
+  }
 }
 main .fourth-section {
   display: flex;
