@@ -1348,6 +1348,18 @@ main {
         padding: 67px 0;
         text-align: center;
 
+        @media (max-width: 1024px) {
+            margin-top: 89px;
+            padding: 50px 20px;
+        }
+        @media (max-width: 600px) {
+            margin-top: 71px;
+            padding: 30px 20px;
+            margin-left: 0;
+            margin-right: 0;
+            border-radius: 0;
+        }
+
         p {
             margin-top: 16px;
             margin-right: auto;
@@ -1355,6 +1367,15 @@ main {
             max-width: 970px;
             font-size: 32px;
             line-height: 38.73px;
+
+            @media (max-width: 1024px) {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            @media (max-width: 600px) {
+                font-size: 24px;
+                line-height: 30px;
+            }
         }
 
         button {
@@ -1364,6 +1385,17 @@ main {
             max-width: 833px;
             font-size: 36px;
             line-height: 43.57px;
+
+            @media (max-width: 1024px) {
+                margin-top: 44px;
+                font-size: 32px;
+                line-height: 39px;
+            }
+            @media (max-width: 600px) {
+                margin-top: 40px;
+                font-size: 22px;
+                line-height: 36px;
+            }
         }
     }
 }
