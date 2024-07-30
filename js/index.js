@@ -23,37 +23,8 @@ document.addEventListener("click", (event) => {
     }
 });
 
-/* Swiper (Slider) */
-function initializeSwiper() {
-    return new Swiper(".swiper", {
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 4,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        on: {
-            init: updateSlidesScale,
-            slideChangeTransitionStart: updateSlidesScale,
-            slideChangeTransitionEnd: updateSlidesScale,
-        },
-    });
-}
-
+/* Swiper (Slider) & Init Settings */
 let swiper = initializeSwiper();
-
-window.addEventListener("resize", () => {
-    if (
-        (window.innerWidth <= 1430 && swiper.params.slidesPerView !== 3) ||
-        (window.innerWidth > 1430 && swiper.params.slidesPerView !== 4)
-    ) {
-        swiper.destroy(true, true);
-        swiper = initializeSwiper();
-    }
-});
-
 function initializeSwiper() {
     return new Swiper(".swiper", {
         loop: true,
@@ -71,16 +42,18 @@ function initializeSwiper() {
     });
 }
 
+/* On Device Width Change Handler */
 window.addEventListener("resize", () => {
     if (
-        (window.innerWidth <= 1430 && swiper.params.slidesPerView !== 3) ||
-        (window.innerWidth > 1430 && swiper.params.slidesPerView !== 4)
+        (window.innerWidth <= 600 && swiper.params.slidesPerView !== 3) ||
+        (window.innerWidth > 600 && swiper.params.slidesPerView !== 4)
     ) {
         swiper.destroy(true, true);
         swiper = initializeSwiper();
     }
 });
 
+/* Slides Width Changer */
 function updateSlidesScale() {
     let allImages = document.querySelectorAll(".swiper-slide img");
     allImages.forEach((img) => {
