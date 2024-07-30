@@ -63,12 +63,12 @@ h2 {
 }
 
 a {
+  transition: 0.3s;
   color: #d2cff5;
   font-weight: 500;
   font-size: 16px;
   line-height: 19.36px;
   text-decoration: none;
-  transition: 0.3s;
 }
 a:hover {
   opacity: 0.7;
@@ -225,8 +225,8 @@ header .content .left-column {
 }
 @media (max-width: 1024px) {
   header .content .left-column img {
-    max-width: 99px;
     margin-left: -10px;
+    max-width: 99px;
   }
 }
 @media (max-width: 600px) {
@@ -248,20 +248,20 @@ header .content .left-column span {
 header .content nav .content {
   display: flex;
   gap: 30px;
-  min-height: 0px;
   border-radius: 25px;
+  min-height: 0px;
 }
 @media (max-width: 1024px) {
   header .content nav {
-    position: absolute;
-    right: 0;
-    background: rgba(13, 17, 24, 0.8549019608);
-    right: 25px;
-    top: 85px;
     display: grid;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    right: 25px;
     grid-template-rows: 0fr;
     z-index: 10;
     transition: 0.3s;
+    background: rgba(13, 17, 24, 0.8549019608);
     overflow: hidden;
   }
   header .content nav.active {
@@ -281,8 +281,8 @@ header .content nav .content {
 @media (max-width: 1024px) {
   header .content nav .content a {
     display: block;
-    text-align: end;
     padding: 5px 10px 5px 20px;
+    text-align: end;
   }
 }
 header .menu {
@@ -440,10 +440,10 @@ main .second-section {
 }
 main .second-section article {
   display: grid;
+  transition: 0.3s;
   border-radius: 8px;
   background: #0d1118;
   padding: 20px;
-  transition: 0.3s;
 }
 @media (max-width: 600px) {
   main .second-section article {
@@ -880,10 +880,10 @@ main .sixth-section .content {
 }
 main .sixth-section .content article {
   display: grid;
+  transition: 0.3s;
   border-radius: 8px;
   background: #0d1118;
   padding: 20px;
-  transition: 0.3s;
 }
 @media (max-width: 1024px) {
   main .sixth-section .content article {
@@ -1331,6 +1331,43 @@ main .eigth-section .content .items article a span {
 main .nineth-section {
   margin-top: 138px;
   text-align: center;
+  position: relative;
+}
+main .nineth-section .swiper {
+  margin-top: 60px;
+  width: 100%;
+  overflow: hidden;
+  height: 828px;
+}
+main .nineth-section .swiper-wrapper {
+  display: flex;
+  transition: 0.4s ease-in-out !important;
+  align-items: center;
+}
+main .nineth-section .swiper-slide {
+  flex-shrink: 0 !important;
+  transition: 0.4s ease-in-out !important;
+}
+main .nineth-section .swiper-slide img {
+  height: 100%;
+}
+main .nineth-section .swiper-button-prev,
+main .nineth-section .swiper-button-next {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  background: #2c27ff;
+  color: #ffffff;
+}
+main .nineth-section .swiper-button-prev::after,
+main .nineth-section .swiper-button-next::after {
+  font-weight: 900;
+}
+main .nineth-section .swiper-button-prev {
+  margin-left: 120px;
+}
+main .nineth-section .swiper-button-next {
+  margin-right: 120px;
 }
 main .tenth-section {
   margin-top: 146px;
@@ -1360,10 +1397,10 @@ main .tenth-section .content {
 }
 main .tenth-section .content article {
   display: grid;
+  transition: 0.3s;
   border-radius: 10px;
   background: #0d1118;
   padding: 20px;
-  transition: 0.3s;
 }
 @media (max-width: 1024px) {
   main .tenth-section .content article {
@@ -1599,9 +1636,9 @@ footer .content .right-column .title {
 }
 @media (max-width: 600px) {
   footer .content .right-column .title {
+    margin-bottom: 15px;
     font-size: 10px;
     line-height: 14px;
-    margin-bottom: 15px;
   }
 }
 footer .content .right-column a {
@@ -1621,9 +1658,9 @@ footer .content .right-column a {
 }
 @media (max-width: 600px) {
   footer .content .right-column a {
+    margin-top: 8px;
     font-size: 10px;
     line-height: 14px;
-    margin-top: 8px;
   }
 }
 footer .content .right-column .socials .title {
