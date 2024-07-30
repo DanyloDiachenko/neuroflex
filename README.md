@@ -5,7 +5,7 @@ Link: https://neuroflex.vercel.app/
 <img width="1800" alt="Screenshot 2024-07-30 at 17 24 51" src="https://github.com/user-attachments/assets/a0d48ba8-ca6d-4dfb-8063-9f70cff14c0f">
 
 
-# EPICSTARS
+# NEUROFLEX
 ### Stack:
 - HTML5
 - CSS3
