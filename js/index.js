@@ -24,43 +24,105 @@ document.addEventListener("click", (event) => {
 });
 
 /* Swiper (Slider) */
-const swiper = new Swiper(".swiper", {
-    loop: true,
-    centeredSlides: true,
-    slidesPerView: 4,
-    spaceBetween: 0,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    on: {
-        init: updateSlidesScale,
-        slideChangeTransitionStart: updateSlidesScale,
-        slideChangeTransitionEnd: updateSlidesScale,
-    },
+function initializeSwiper() {
+    return new Swiper(".swiper", {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        on: {
+            init: updateSlidesScale,
+            slideChangeTransitionStart: updateSlidesScale,
+            slideChangeTransitionEnd: updateSlidesScale,
+        },
+    });
+}
+
+let swiper = initializeSwiper();
+
+window.addEventListener("resize", () => {
+    if (
+        (window.innerWidth <= 1430 && swiper.params.slidesPerView !== 3) ||
+        (window.innerWidth > 1430 && swiper.params.slidesPerView !== 4)
+    ) {
+        swiper.destroy(true, true);
+        swiper = initializeSwiper();
+    }
+});
+
+function initializeSwiper() {
+    return new Swiper(".swiper", {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: window.innerWidth < 600 ? 2 : 4,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        on: {
+            init: updateSlidesScale,
+            slideChangeTransitionStart: updateSlidesScale,
+            slideChangeTransitionEnd: updateSlidesScale,
+        },
+    });
+}
+
+window.addEventListener("resize", () => {
+    if (
+        (window.innerWidth <= 1430 && swiper.params.slidesPerView !== 3) ||
+        (window.innerWidth > 1430 && swiper.params.slidesPerView !== 4)
+    ) {
+        swiper.destroy(true, true);
+        swiper = initializeSwiper();
+    }
 });
 
 function updateSlidesScale() {
-    let allSlides = document.querySelectorAll(".swiper-slide");
-    allSlides.forEach((slide) => {
-        slide.style.height = "414px";
-        slide.style.opacity = "0.5";
+    let allImages = document.querySelectorAll(".swiper-slide img");
+    allImages.forEach((img) => {
+        img.style.transform = "scale(0.6)";
+        img.style.opacity = "0.5";
     });
 
-    let activeSlide = document.querySelector(".swiper-slide-active");
-    if (activeSlide) {
-        activeSlide.style.height = "828px";
-        activeSlide.style.opacity = "1";
+    let activeImage = document.querySelector(".swiper-slide-active img");
+    if (activeImage) {
+        activeImage.style.transform = "scale(1)";
+        activeImage.style.opacity = "1";
+    }
 
-        let nextSlide = activeSlide.nextElementSibling;
-        let prevSlide = activeSlide.previousElementSibling;
-        if (nextSlide) {
-            nextSlide.style.height = "628px";
-            nextSlide.style.opacity = "0.75";
-        }
-        if (prevSlide) {
-            prevSlide.style.height = "628px";
-            prevSlide.style.opacity = "0.75";
-        }
+    let nextImage =
+        activeImage.parentElement.nextElementSibling.querySelector("img");
+    let prevImage =
+        activeImage.parentElement.previousElementSibling.querySelector("img");
+    if (nextImage) {
+        nextImage.style.transform = "scale(0.8)";
+        nextImage.style.opacity = "0.75";
+        /* nextImage.style.marginLeft = "0";
+        nextImage.style.marginRight = "0"; */
+    }
+    if (prevImage) {
+        prevImage.style.transform = "scale(0.8)";
+        prevImage.style.opacity = "0.75";
+        /* prevImage.style.marginLeft = "0";
+        prevImage.style.marginRight = "0"; */
+    }
+
+    let secondNextImage =
+        nextImage?.parentElement.nextElementSibling?.querySelector("img");
+    let secondPrevImage =
+        prevImage?.parentElement.previousElementSibling?.querySelector("img");
+    if (secondNextImage) {
+        secondNextImage.style.transform = "scale(0.5)";
+        secondNextImage.style.opacity = "0.5";
+        /* secondNextImage.style.marginRight = "50%"; */
+    }
+    if (secondPrevImage) {
+        secondPrevImage.style.transform = "scale(0.5)";
+        secondPrevImage.style.opacity = "0.5";
+        /* secondPrevImage.style.marginLeft = "50%"; */
     }
 }
